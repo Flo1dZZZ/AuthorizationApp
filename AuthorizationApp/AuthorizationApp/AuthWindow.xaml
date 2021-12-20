@@ -1,0 +1,25 @@
+﻿<Window x:Class="AuthorizationApp.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthorizationApp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Super Application" Height="370" Width="550" ResizeMode="CanMinimize">
+    <Grid Background="#ffdadada">
+        <Border Margin="5" Background="White" VerticalAlignment="Center" Padding="20 10 20 10" MaxWidth="550" CornerRadius="20">
+            <!--<Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>-->
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <TextBox x:Name="txtBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="White"/>
+                <PasswordBox x:Name="passBoxFirst" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passBoxSecond" materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>                
+                <Button x:Name="buttonAuth" Content="Войти" Margin="0 10" Click="buttonAuth_Click"/>
+                <Button x:Name="buttonAccDoesntExist" HorizontalAlignment="Center" Content="Еще нет аккаунта?" Style="{StaticResource MaterialDesignFlatButton}" Click="buttonAccDoesntExist_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
